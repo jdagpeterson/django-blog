@@ -7,17 +7,25 @@
             <h1><a href="/">My Blog</a></h1>
         </div>
 
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
         <div>
-            <p>published: 18.05.2020, 19:45</p>
             <h2><a href="">My first post</a></h2>
+            <p>published: 18.05.2020, 19:45</p>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id 
                 elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor 
                 mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         </div>
 
         <div>
-            <p>published: 18.05.2014, 19:48</p>
             <h2><a href="">My second post</a></h2>
+            <p>published: 18.05.2014, 19:48</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                 incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada. 
                 Quis auctor elit sed vulputate mi sit amet mauris commodo. Interdum velit euismod in 
